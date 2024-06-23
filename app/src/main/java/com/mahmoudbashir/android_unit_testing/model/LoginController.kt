@@ -11,5 +11,10 @@ class LoginController {
 
     fun isEmailValid() = loginData.email.isNotEmpty()
 
-    fun isPasswordValid() = loginData.password.isNotEmpty() && loginData.password.length >= 6
+    fun isPasswordValid(): Boolean {
+        return if (loginData.password.isEmpty()) {
+            throw IllegalArgumentException("Password is invalid !")
+        }
+        else loginData.password.isNotEmpty() && loginData.password.length >= 6
+    }
 }
