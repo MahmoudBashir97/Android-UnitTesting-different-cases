@@ -1,6 +1,5 @@
 package com.mahmoudbashir.android_unit_testing.testdoubles
 
-import io.mockk.mockk
 import org.junit.Assert
 import org.junit.Test
 
